@@ -1,201 +1,54 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kay’s Kouncil Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-body {
-  font-family: Georgia, serif;
-  background-image: url("assets/bg-thai.webp");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: #efe2c4;
-  color: #2d2a26;
-  line-height: 1.6;
-  min-height: 100vh;
-}
+  <main class="site-wrapper">
 
-.site-wrapper {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    <header class="hero">
+      <div class="language-row">
+        <a href="index-thai.html" class="language-button">ไทย</a>
+      </div>
 
-.hero {
-  text-align: center;
-  padding: 30px 20px;
-}
+      <img src="assets/logo.png" alt="Kay’s Kouncil Kitchen logo" class="logo" />
 
-.language-row {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 12px;
-}
+      <p class="tagline">
+        Homemade Thai cuisine,<br>
+        vibrant with tradition<br>
+        and prepared by the best.
+      </p>
 
-.language-button {
-  background: rgba(255, 248, 235, 0.95);
-  color: #7c1f1f;
-  padding: 8px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
-  border: 2px solid #d4af37;
-  transition: all 0.3s ease;
-}
+      <p class="subtagline">
+        Our very own Kay is bringing authentic Thai fare to BOPRC staff,
+        with a limited number of freshly prepared dishes available each offering.
+        Explore what’s on today, place your order, and enjoy something truly special.
+      </p>
+    </header>
 
-.language-button:hover {
-  background: #7c1f1f;
-  color: #fff8eb;
-}
+    <section class="current-offer">
+      <h2>Today’s Offering</h2>
 
-.logo {
-  max-width: 230px;
-  width: 100%;
-  margin-bottom: 20px;
-}
+      <p class="description">
+        Kay’s current dish is ready to view. See what’s cooking, check the details,
+        and place your order.
+      </p>
 
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-  color: #7c1f1f;
-}
+      <a class="order-button offering-button" href="dishes/pork-larb/">
+        View Pork Larb
+      </a>
+    </section>
 
-.tagline {
-  font-size: 1.1rem;
-  color: #234b2c;
-  max-width: 420px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
+    <footer>
+      <p>Made with care by Kay</p>
+    </footer>
 
-.current-offer {
-  background: rgba(255, 248, 235, 0.96);
-  border: 2px solid #d4af37;
-  border-radius: 20px;
-  padding: 24px;
-  margin-top: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  text-align: center;
-}
+  </main>
 
-.current-offer h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #7c1f1f;
-  font-size: 2rem;
-}
-
-.dish-image {
-  width: 100%;
-  border-radius: 14px;
-  border: 2px solid #d4af37;
-  margin-bottom: 20px;
-  object-fit: cover;
-}
-
-.offer-details h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #234b2c;
-}
-
-.description {
-  margin-bottom: 18px;
-  color: #4a3b2b;
-  font-size: 1rem;
-}
-
-.offer-details p {
-  margin-bottom: 10px;
-  color: #2d2a26;
-}
-
-.offer-details strong {
-  color: #7c1f1f;
-}
-
-.order-button {
-  display: block;
-  text-align: center;
-  background: linear-gradient(135deg, #b22222, #7c1f1f);
-  color: white;
-  text-decoration: none;
-  padding: 16px;
-  margin-top: 20px;
-  border-radius: 14px;
-  font-size: 1.15rem;
-  font-weight: bold;
-  border: 2px solid #d4af37;
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.order-button:hover {
-  transform: scale(1.02);
-  background: linear-gradient(135deg, #c62828, #8b0000);
-}
-
-.offering-button {
-  width: auto;
-  display: inline-block;
-  padding: 12px 28px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ingredients-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.ingredients-list li {
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(122, 46, 31, 0.15);
-  color: #234b2c;
-}
-
-.dish-footer-art {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.footer-cart {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px 0;
-  color: #7c1f1f;
-  font-size: 0.95rem;
-}
-
-@media (min-width: 768px) {
-  .site-wrapper {
-    max-width: 1100px;
-    padding: 40px;
-  }
-
-  .hero h1 {
-    font-size: 3.2rem;
-  }
-
-  .tagline {
-    font-size: 1.3rem;
-  }
-
-  .current-offer {
-    padding: 35px;
-  }
-
-  .dish-image {
-    max-height: 420px;
-  }
-}
+  <script src="script.js"></script>
+</body>
+</html>
