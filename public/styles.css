@@ -1,144 +1,41 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, serif;
-  background-image: url("assets/bg-thai.webp");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: #efe2c4;
-  color: #2d2a26;
-  line-height: 1.6;
-  min-height: 100vh;
-}
-
-.site-wrapper {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.hero {
-  text-align: center;
-  padding: 30px 20px;
+.language-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 
 .logo {
-  max-width: 180px;
+  max-width: 300px;
   width: 100%;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-  color: #7c1f1f;
+  margin-bottom: 28px;
 }
 
 .tagline {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: #234b2c;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-.current-offer {
-  background: rgba(255, 248, 235, 0.96);
-  border: 2px solid #d4af37;
-  border-radius: 20px;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.current-offer h2 {
+  max-width: 500px;
+  margin: 0 auto 24px auto;
+  line-height: 1.8;
   text-align: center;
-  margin-bottom: 20px;
-  color: #7c1f1f;
-  font-size: 2rem;
 }
 
-.dish-image {
-  width: 100%;
-  border-radius: 14px;
-  border: 2px solid #d4af37;
-  margin-bottom: 20px;
-  object-fit: cover;
-}
-
-.offer-details h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #234b2c;
-}
-
-.description {
-  margin-bottom: 15px;
+.subtagline {
+  font-size: 1rem;
   color: #4a3b2b;
+  max-width: 760px;
+  margin: 0 auto 36px auto;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.offering-button {
+  width: auto;
+  display: inline-block;
+  padding: 12px 34px;
+  margin: 20px auto 0 auto;
   font-size: 1rem;
 }
 
-.offer-details p {
-  margin-bottom: 10px;
-  color: #2d2a26;
-}
-
-.offer-details strong {
-  color: #7c1f1f;
-}
-
-.order-button {
-  display: block;
-  width: 100%;
+.current-offer {
   text-align: center;
-  background: linear-gradient(135deg, #b22222, #7c1f1f);
-  color: white;
-  text-decoration: none;
-  padding: 16px;
-  margin-top: 20px;
-  border-radius: 14px;
-  font-size: 1.15rem;
-  font-weight: bold;
-  border: 2px solid #d4af37;
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.order-button:hover {
-  transform: scale(1.02);
-  background: linear-gradient(135deg, #c62828, #8b0000);
-}
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px 0;
-  color: #7c1f1f;
-  font-size: 0.95rem;
-}
-
-@media (min-width: 768px) {
-  .site-wrapper {
-    max-width: 1100px;
-    padding: 40px;
-  }
-
-  .hero h1 {
-    font-size: 3.2rem;
-  }
-
-  .tagline {
-    font-size: 1.25rem;
-  }
-
-  .current-offer {
-    padding: 35px;
-  }
-
-  .dish-image {
-    max-height: 420px;
-  }
 }
