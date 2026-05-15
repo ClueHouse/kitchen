@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kay’s Kouncil Kitchen</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <main class="site-wrapper">
+  <main class="page">
 
     <header class="hero">
-      <img src="assets/logo-placeholder.png" alt="Kay’s Kouncil Kitchen Logo" class="logo">
-      <h1>Kay’s Kouncil Kitchen</h1>
-      <p class="tagline">Authentic Thai meals, lovingly prepared for the workplace.</p>
+      <img src="assets/logo.png" alt="Kay’s Kouncil Kitchen logo" class="logo" />
+
+      <p class="intro">
+        Authentic Thai meals, lovingly prepared by Kay and shared with the workplace.
+      </p>
     </header>
 
-    <section class="current-offer">
-      <h2>Current Offer</h2>
+    <section class="card current-offer">
+      <p class="eyebrow">Current offer</p>
 
-      <img src="assets/dish-placeholder.jpg" alt="Current dish offering" class="dish-image">
+      <h1>Pork Larb</h1>
 
-      <div class="offer-details">
-        <h3>Thai Green Curry</h3>
-        <p class="description">
-          Fragrant green curry with tender chicken, vegetables, jasmine rice, and Kay’s signature homemade touch.
-        </p>
+      <p class="dish-description">
+        A bright, savoury Thai salad with minced pork, fresh herbs, lime, chilli,
+        and toasted rice powder.
+      </p>
 
+      <div class="details">
         <p><strong>Price:</strong> $15</p>
-        <p><strong>Order Deadline:</strong> Friday, 5:00 PM</p>
-        <p><strong>Collection Date:</strong> Tuesday Lunch Break</p>
+        <p><strong>Order by:</strong> Friday, 5:00 PM</p>
+        <p><strong>Pickup:</strong> Tuesday lunch break</p>
       </div>
 
-      <a href="mailto:kay@example.com?subject=Kay's Kouncil Kitchen Order&body=Hi Kay,%0D%0A%0D%0AI would like to place an order for:%0D%0A%0D%0AName:%0D%0AQuantity:%0D%0A%0D%0AThank you!"
-         class="order-button">
-         Place Order
+      <a
+        class="order-button"
+        href="mailto:kay@example.com?subject=Kay's Kouncil Kitchen Order - Pork Larb&body=Hi Kay,%0D%0A%0D%0AI would like to order Pork Larb.%0D%0A%0D%0AName:%0D%0AQuantity:%0D%0A%0D%0AThank you!"
+      >
+        Place Order
       </a>
     </section>
 
+    <section class="card">
+      <h2>How it works</h2>
+      <p>
+        Scan the code, check Kay’s current dish, then tap the order button to send
+        Kay a quick email.
+      </p>
+    </section>
+
     <footer>
-      <p>Prepared with care by Kay ❤️</p>
+      <p>Made with care by Kay</p>
     </footer>
 
   </main>
