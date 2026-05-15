@@ -1,100 +1,167 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #f7f3ed;
-  color: #2d2d2d;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: Georgia, serif;
+  background-image: url("assets/bg-thai.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #efe2c4;
+  color: #2d2a26;
+  min-height: 100vh;
 }
 
-.site-wrapper {
-  max-width: 480px;
+.page {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem 1rem 3rem;
 }
 
 .hero {
   text-align: center;
-  padding: 30px 20px;
+  padding: 1rem 0 2rem;
+}
+
+.language-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.language-button {
+  background: #f4e7c8;
+  color: #7c1f1f;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #d4af37;
 }
 
 .logo {
-  max-width: 140px;
-  margin-bottom: 20px;
+  width: 180px;
+  max-width: 70%;
+  margin-bottom: 1rem;
 }
 
-.hero h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #7a2e1f;
+.intro {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #234b2c;
 }
 
-.tagline {
-  font-size: 1rem;
-  color: #555;
+.card {
+  background: rgba(255, 248, 235, 0.96);
+  border: 2px solid #d4af37;
+  border-radius: 24px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .current-offer {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.current-offer h2 {
+.eyebrow {
+  display: inline-block;
+  background: #234b2c;
+  color: #f4e7c8;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  width: fit-content;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #234b2c;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 20px;
-  color: #7a2e1f;
+  color: #234b2c;
+  margin-bottom: 1rem;
 }
 
-.dish-image {
-  width: 100%;
+.dish-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #4a3b2b;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-grid div {
+  padding: 0.75rem 1rem;
+  background: rgba(244, 231, 200, 0.6);
+  border-left: 4px solid #b22222;
   border-radius: 12px;
-  margin-bottom: 20px;
 }
 
-.offer-details h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.detail-grid span {
+  display: block;
+  font-size: 0.9rem;
+  color: #7c1f1f;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
-.description {
-  margin-bottom: 15px;
-  color: #444;
-}
-
-.offer-details p {
-  margin-bottom: 8px;
+.detail-grid strong {
+  font-size: 1.1rem;
 }
 
 .order-button {
   display: block;
   width: 100%;
   text-align: center;
-  background: #c94f2d;
+  background: linear-gradient(135deg, #b22222, #7c1f1f);
   color: white;
   text-decoration: none;
-  padding: 16px;
-  margin-top: 20px;
-  border-radius: 12px;
-  font-size: 1.1rem;
+  padding: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  transition: background 0.3s ease;
+  border-radius: 16px;
+  border: 2px solid #d4af37;
+  transition: transform 0.2s ease;
 }
 
 .order-button:hover {
-  background: #a63d20;
+  transform: scale(1.02);
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 footer {
   text-align: center;
-  margin-top: 30px;
-  padding: 20px 0;
-  color: #666;
-  font-size: 0.9rem;
+  color: #7c1f1f;
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .current-offer {
+    padding: 3rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
