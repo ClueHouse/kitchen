@@ -5,6 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ลาบหมู | Kay’s Kouncil Kitchen</title>
   <link rel="stylesheet" href="../../styles.css" />
+
+  <style>
+    .served-with {
+      text-align: right;
+      list-style: none;
+      margin-top: 14px;
+      font-size: 1.05rem;
+      color: #234b2c;
+    }
+
+    .spice-level {
+      margin: 20px 0 14px;
+      text-align: center;
+      font-weight: bold;
+      color: #7a2d17;
+    }
+
+    .spice-meter {
+      display: inline-flex;
+      gap: 6px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .spice-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #d46a2c;
+      animation: spicePulse 1.6s ease-in-out infinite;
+    }
+
+    .spice-dot:nth-child(2) {
+      animation-delay: 0.18s;
+    }
+
+    .spice-dot:nth-child(3) {
+      background: #e8b46a;
+      animation-delay: 0.36s;
+    }
+
+    @keyframes spicePulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.65;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -47,8 +99,17 @@
         <li>ผักชี</li>
         <li>หอมแดงซอย</li>
         <li>ใบมะกรูดซอยละเอียด</li>
-        <li><strong>เสิร์ฟพร้อมข้าว</strong></li>
+        <li class="served-with"><strong>เสิร์ฟพร้อมข้าวหอมมะลิไทย</strong></li>
       </ul>
+
+      <div class="spice-level">
+        ระดับความเผ็ด: เผ็ดกลางค่อนอ่อน
+        <span class="spice-meter" aria-hidden="true">
+          <span class="spice-dot"></span>
+          <span class="spice-dot"></span>
+          <span class="spice-dot"></span>
+        </span>
+      </div>
 
       <div class="offer-details">
         <p><strong>ราคา:</strong> $20</p>
