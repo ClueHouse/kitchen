@@ -1,9 +1,11 @@
- for container)<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Beef Panang Curry | Kay’s Kouncil Kitchen</title>
+
   <link rel="stylesheet" href="../../styles.css" />
 
   <style>
@@ -24,29 +26,25 @@
       object-fit: cover;
     }
 
-    .served-with {
-      text-align: right;
-      list-style: none;
-      margin-top: 14px;
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none !important;
-
-      font-size: 1.05rem;
-      color: #7a2d17;
-      font-weight: bold;
-    }
-
+    .served-with,
     .served-with-sub {
       text-align: right;
       list-style: none;
-      margin-top: 2px;
-      padding-top: 0;
-      border-top: none !important;
-
       font-size: 1.05rem;
       color: #7a2d17;
       font-weight: bold;
+      border: none !important;
+    }
+
+    .served-with {
+      margin-top: 14px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .served-with-sub {
+      margin-top: 2px;
+      padding-top: 0;
     }
 
     .spice-level {
@@ -80,11 +78,20 @@
       animation-delay: 0.36s;
     }
 
+    .limited-note {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #7a2d17;
+      font-size: 1.1rem;
+    }
+
     @keyframes spicePulse {
       0%, 100% {
         transform: scale(1);
         opacity: 0.65;
       }
+
       50% {
         transform: scale(1.3);
         opacity: 1;
@@ -92,6 +99,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <main class="site-wrapper">
@@ -105,7 +113,12 @@
         <a href="thai.html" class="language-button">ไทย</a>
       </div>
 
-      <img src="../../assets/logo.png" alt="Kay’s Kouncil Kitchen logo" class="logo" style="max-width: 420px;" />
+      <img
+        src="../../assets/logo.png"
+        alt="Kay’s Kouncil Kitchen logo"
+        class="logo"
+        style="max-width: 420px;"
+      />
 
       <h1>Beef Panang Curry</h1>
 
@@ -114,11 +127,10 @@
         warming spices, and the slow-burning glow of red chilies—a rich Thai embrace in every spoonful.
       </p>
 
-      <!-- Panang Curry photo will be added here later -->
-
     </header>
 
     <section class="current-offer" style="border: 3px solid #7a2d17;">
+
       <h2>Ingredients</h2>
 
       <ul class="ingredients-list">
@@ -143,13 +155,8 @@
         <li>Chopped kaffir lime leaves</li>
         <li>Chopped fresh red chilies</li>
 
-        <li class="served-with">
-          Served with hot rice
-        </li>
-
-        <li class="served-with-sub">
-          Dairy-free &amp; gluten-free
-        </li>
+        <li class="served-with">Served with hot rice</li>
+        <li class="served-with-sub">Dairy-free &amp; gluten-free</li>
       </ul>
 
       <div class="spice-level">
@@ -180,31 +187,30 @@
           <strong>Take-home packs available.</strong>
           <br />
           Please indicate your preference when ordering.
+          <br />
+          <em>Add $1 for takeaway container.</em>
         </p>
       </div>
 
-      <p
-  style="
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #7a2d17;
-    font-size: 1.1rem;
-  "
->
-  Limited availability. Order soon!
-</p>
-      
+      <p class="limited-note">
+        Limited availability. Order soon!
+      </p>
+
       <a
         class="order-button"
-        href="mailto:kayskouncilkitchen@gmail.com?subject=Kay's Kouncil Kitchen Order - Panang Curry&body=Hi Kay,%0D%0A%0D%0AI would like to order Panang Curry.%0D%0A%0D%0AName:%0D%0AQuantity:%0D%0ATake-home Pack (Yes/No):%0D%0A%0D%0AI will pay Robert at reception shortly.%0D%0A%0D%0AThank you!"
+        href="mailto:kayskouncilkitchen@gmail.com?subject=Kay%27s%20Kouncil%20Kitchen%20Order%20-%20Panang%20Curry&body=Hi%20Kay,%0D%0A%0D%0AI%20would%20like%20to%20order%20Panang%20Curry.%0D%0A%0D%0AName:%0D%0AQuantity:%0D%0ATake-home%20Pack%20(Yes/No%20-%20add%20%241%20for%20takeaway%20container):%0D%0A%0D%0AI%20will%20pay%20Robert%20at%20reception%20shortly.%0D%0A%0D%0AThank%20you!"
       >
         Place Order
       </a>
+
     </section>
 
     <section class="dish-footer-art">
-      <img src="../../assets/hero-banner.webp" alt="Kay’s Kouncil Kitchen Thai street cart" class="footer-cart" />
+      <img
+        src="../../assets/hero-banner.webp"
+        alt="Kay’s Kouncil Kitchen Thai street cart"
+        class="footer-cart"
+      />
     </section>
 
     <footer>
@@ -214,5 +220,6 @@
   </main>
 
   <script src="../../script.js"></script>
+
 </body>
 </html>
