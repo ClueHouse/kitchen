@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>แกงพะแนงเนื้อ | Kay’s Kouncil Kitchen</title>
+  <link rel="stylesheet" href="../../styles.css" />
+
+  <style>
+    body {
+      background-image: url("../../assets/panang.webp");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .dish-photo {
+      display: block;
+      width: min(92%, 520px);
+      margin: 26px auto 0;
+      border-radius: 28px;
+      border: 3px solid #7a2d17;
+      box-shadow: 0 18px 40px rgba(122, 45, 23, 0.28);
+      object-fit: cover;
+    }
+
+    .served-with {
+      text-align: right;
+      list-style: none;
+      margin-top: 14px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none !important;
+
+      font-size: 1.05rem;
+      color: #7a2d17;
+      font-weight: bold;
+    }
+
+    .served-with-sub {
+      text-align: right;
+      list-style: none;
+      margin-top: 2px;
+      padding-top: 0;
+      border-top: none !important;
+
+      font-size: 1.05rem;
+      color: #7a2d17;
+      font-weight: bold;
+    }
+
+    .spice-level {
+      margin: 20px 0 14px;
+      text-align: center;
+      font-weight: bold;
+      color: #7a2d17;
+    }
+
+    .spice-meter {
+      display: inline-flex;
+      gap: 6px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .spice-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #d46a2c;
+      animation: spicePulse 1.6s ease-in-out infinite;
+    }
+
+    .spice-dot:nth-child(2) {
+      animation-delay: 0.18s;
+    }
+
+    .spice-dot:nth-child(3) {
+      background: #e8b46a;
+      animation-delay: 0.36s;
+    }
+
+    @keyframes spicePulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.65;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="site-wrapper">
+
+    <header class="hero">
+
+      <a href="../../index.html" class="back-button">← กลับไปที่ครัว</a>
+
+      <div class="language-row">
+        <a href="./" class="language-button">English</a>
+        <a href="thai.html" class="language-button active">ไทย</a>
+      </div>
+
+      <img src="../../assets/logo.png" alt="Kay’s Kouncil Kitchen logo" class="logo" style="max-width: 420px;" />
+
+      <h1>แกงพะแนงเนื้อ</h1>
+
+      <p class="tagline">
+        แกงพะแนงเนื้อรสเข้มข้น หอมมันด้วยกะทิ ใบมะกรูด เครื่องแกงหอม ๆ
+        และความเผ็ดนุ่มลึกจากพริกแดง—อบอุ่นละมุนแบบไทยในทุกคำ
+      </p>
+
+      <!-- Panang Curry photo will be added here later -->
+
+    </header>
+
+    <section class="current-offer" style="border: 3px solid #7a2d17;">
+      <h2>ส่วนผสม</h2>
+
+      <ul class="ingredients-list">
+        <li>พริกแห้งเม็ดแดง</li>
+        <li>หอมแดง</li>
+        <li>กระเทียม</li>
+        <li>ข่า</li>
+        <li>ตะไคร้</li>
+        <li>ผิวมะกรูด</li>
+        <li>เกลือ</li>
+        <li>กะปิ</li>
+        <li>เนื้อวัว</li>
+        <li>กะทิ</li>
+        <li>น้ำปลา</li>
+        <li>น้ำซุปเนื้อ</li>
+        <li>น้ำตาลปี๊บ</li>
+        <li>ซีอิ๊ว</li>
+        <li>แครอท</li>
+        <li>ดอกกะหล่ำ</li>
+        <li>บรอกโคลี</li>
+        <li>พริกหวาน</li>
+        <li>ใบมะกรูดซอย</li>
+        <li>พริกแดงสดซอย</li>
+
+        <li class="served-with">
+          เสิร์ฟพร้อมข้าวสวยร้อน ๆ
+        </li>
+
+        <li class="served-with-sub">
+          ไม่มีส่วนผสมของนม และไม่มีกลูเตน
+        </li>
+      </ul>
+
+      <div class="spice-level">
+        ระดับความเผ็ด: เผ็ดน้อยถึงปานกลาง
+        <span class="spice-meter" aria-hidden="true">
+          <span class="spice-dot"></span>
+          <span class="spice-dot"></span>
+          <span class="spice-dot"></span>
+        </span>
+      </div>
+
+      <div class="offer-details">
+        <p><strong>ราคา:</strong> $20</p>
+
+        <p>
+          <strong>ปิดรับออเดอร์:</strong>
+          ภายในสิ้นวันศุกร์ที่ 3 กรกฎาคม
+          <br />
+          <em>(ชำระเงินเพื่อยืนยันคำสั่งซื้อ)</em>
+        </p>
+
+        <p>
+          <strong>รับอาหาร:</strong>
+          วันพุธที่ 8 กรกฎาคม เวลา 12.30pm
+        </p>
+
+        <p>
+          <strong>มีแบบแพ็กกลับบ้านให้เลือก</strong>
+          <br />
+          กรุณาระบุความต้องการตอนสั่งซื้อ
+        </p>
+      </div>
+
+      <p
+        style="
+          margin-top: 20px;
+          text-align: center;
+          font-weight: bold;
+          color: #7a2d17;
+          font-size: 1.1rem;
+        "
+      >
+        จำนวนจำกัด รีบสั่งได้เลยค่ะ!
+      </p>
+
+      <a
+        class="order-button"
+        href="mailto:kayskouncilkitchen@gmail.com?subject=Kay's Kouncil Kitchen Order - Panang Curry&body=Hi Kay,%0D%0A%0D%0AI would like to order Panang Curry.%0D%0A%0D%0AName:%0D%0AQuantity:%0D%0ATake-home Pack (Yes/No):%0D%0A%0D%0AI will pay Robert at reception shortly.%0D%0A%0D%0AThank you!"
+      >
+        สั่งอาหาร
+      </a>
+    </section>
+
+    <section class="dish-footer-art">
+      <img src="../../assets/hero-banner.webp" alt="Kay’s Kouncil Kitchen Thai street cart" class="footer-cart" />
+    </section>
+
+    <footer>
+      <p>ทำด้วยความใส่ใจจาก Kay</p>
+    </footer>
+
+  </main>
+
+  <script src="../../script.js"></script>
+</body>
+</html>
