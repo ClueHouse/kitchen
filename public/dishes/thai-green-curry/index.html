@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thai Green Curry | Kay’s Kouncil Kitchen</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    :root {
+      --laksa-red: #173f2b;
+      --laksa-red-deep: #071d13;
+      --laksa-gold: #d7b85a;
+      --laksa-gold-light: #f1dc91;
+      --laksa-cream: #f5edcf;
+      --laksa-green: #174c31;
+      --laksa-ink: #183520;
+    }
+
+    body.laksa-page {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--laksa-cream);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(85, 135, 71, 0.32), transparent 34%),
+        radial-gradient(circle at 82% 8%, rgba(52, 105, 65, 0.24), transparent 32%),
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.014) 0 2px, transparent 2px 12px),
+        linear-gradient(135deg, #315f3f 0%, #1e462e 45%, #0d2b1c 100%);
+      background-attachment: fixed;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .laksa-shell {
+      width: min(1220px, calc(100% - 32px));
+      margin: 32px auto;
+      overflow: hidden;
+      border: 2px solid var(--laksa-gold);
+      border-radius: 24px;
+      background: var(--laksa-red-deep);
+      box-shadow: 0 28px 70px rgba(0,0,0,.48);
+    }
+
+    .laksa-top {
+      display: grid;
+      grid-template-columns: minmax(330px, .82fr) minmax(520px, 1.48fr);
+      min-height: 620px;
+    }
+
+    .laksa-intro {
+      position: relative;
+      padding: 14px 46px 34px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 16%, rgba(107, 148, 76, .28), transparent 30%),
+        linear-gradient(180deg, #16442c 0%, #082518 100%);
+      border-right: 1px solid rgba(214,170,61,.65);
+    }
+
+    .laksa-intro::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      pointer-events: none;
+      border: 1px solid rgba(214,170,61,.18);
+    }
+
+    .laksa-nav {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 10px;
+      color: #d6b56a;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .9;
+    }
+
+    .laksa-nav a {
+      color: inherit;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .laksa-nav a:hover { color: #fff0a6; }
+
+    .laksa-nav-right {
+      text-align: right;
+    }
+
+    .laksa-logo {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: min(155px, 42%);
+      height: auto;
+      margin: 6px auto 16px;
+      filter: drop-shadow(0 7px 14px rgba(0,0,0,.3));
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 4px 0 10px;
+      color: var(--laksa-gold-light);
+      font-size: .95rem;
+      font-weight: 700;
+      letter-spacing: .21em;
+      text-transform: uppercase;
+    }
+
+    .laksa-title {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--laksa-gold-light);
+      font-size: clamp(4.4rem, 7vw, 7.5rem);
+      font-weight: 400;
+      line-height: .9;
+      text-shadow: 0 3px 18px rgba(0,0,0,.32);
+    }
+
+    .laksa-title-top,
+    .laksa-title-bottom {
+      display: block;
+    }
+
+    .laksa-title-top {
+      font-size: .5em;
+      line-height: 1;
+      margin-bottom: .08em;
+    }
+
+    .curry-page .laksa-title {
+      font-size: clamp(3.35rem, 5.5vw, 6rem);
+      line-height: .92;
+    }
+
+    .curry-page .laksa-title-bottom {
+      max-width: 6.5em;
+      margin-inline: auto;
+    }
+
+    .laksa-flourish {
+      position: relative;
+      z-index: 1;
+      width: 145px;
+      height: 1px;
+      margin: 22px auto 20px;
+      background: linear-gradient(90deg, transparent, var(--laksa-gold), transparent);
+    }
+
+    .laksa-flourish::after {
+      content: "◆";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -52%);
+      padding: 0 10px;
+      color: var(--laksa-gold);
+      background: #0d2f1e;
+      font-size: .65rem;
+    }
+
+    .laksa-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 360px;
+      margin: 0 auto 14px;
+      color: #f8e7c3;
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.5;
+      text-wrap: balance;
+    }
+
+    .laksa-hook {
+      position: relative;
+      z-index: 1;
+      margin: 0 auto 18px;
+      color: var(--laksa-gold-light);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.35;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .vegetarian-feature {
+      position: relative;
+      z-index: 1;
+      width: min(300px, 100%);
+      margin: 0 auto 18px;
+      padding: 12px 16px 13px;
+      border: 1px solid rgba(241,220,145,.9);
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(132,183,91,.22), transparent 68%),
+        rgba(7,38,24,.82);
+      box-shadow: inset 0 0 0 3px rgba(215,184,90,.12), 0 8px 20px rgba(0,0,0,.2);
+      color: #f5edcf;
+      text-align: center;
+    }
+
+    .vegetarian-feature strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--laksa-gold-light);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .vegetarian-feature span {
+      display: block;
+      font-size: 1.02rem;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    .laksa-price {
+      position: relative;
+      z-index: 1;
+      width: min(240px, 100%);
+      margin: 0 auto 16px;
+      padding: 9px 18px 11px;
+      border: 2px solid var(--laksa-gold);
+      border-radius: 16px;
+      box-shadow: inset 0 0 0 4px #0b2a1b, 0 6px 16px rgba(0,0,0,.18);
+      color: var(--laksa-gold-light);
+    }
+
+    .laksa-price strong {
+      display: block;
+      font-size: 3.35rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .laksa-price small {
+      display: block;
+      margin-top: 5px;
+      font-size: .88rem;
+      font-style: italic;
+    }
+
+    .laksa-order {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: min(255px, 100%);
+      margin: 0 auto;
+      padding: 13px 20px;
+      border: 2px solid var(--laksa-gold);
+      border-radius: 14px;
+      background: linear-gradient(180deg, #165b38, var(--laksa-green));
+      color: #fff7d8;
+      text-decoration: none;
+      font-size: 1.34rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      box-shadow: inset 0 0 0 4px #0a2819, 0 8px 20px rgba(0,0,0,.25);
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .laksa-order:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.12);
+    }
+
+    .laksa-order-info {
+      position: relative;
+      z-index: 1;
+      width: min(320px, 100%);
+      margin: 14px auto 0;
+      padding: 12px 14px;
+      border: 1px solid rgba(214,170,61,.68);
+      border-radius: 12px;
+      background: rgba(5, 31, 19, 0.72);
+      box-shadow: inset 0 0 0 1px rgba(255, 227, 146, 0.12);
+      color: #f4d989;
+      text-align: left;
+      font-size: .9rem;
+      line-height: 1.4;
+    }
+
+    .laksa-order-info p {
+      margin: 0;
+    }
+
+    .laksa-order-info p + p {
+      margin-top: 4px;
+    }
+
+    .laksa-order-info .order-note {
+      color: #f8e7be;
+      font-style: italic;
+    }
+
+    .laksa-photo-wrap {
+      position: relative;
+      min-height: 620px;
+      overflow: hidden;
+      background: #160d07;
+    }
+
+    .laksa-photo-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(5,31,19,.25), transparent 14%, transparent 88%, rgba(5,31,19,.2));
+    }
+
+    .laksa-photo {
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .ingredients-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.12fr 1.12fr .92fr;
+      gap: 0;
+      padding: 46px 44px 38px;
+      color: var(--laksa-ink);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(198,142,45,.09), transparent 24%),
+        repeating-linear-gradient(0deg, rgba(89,42,9,.025) 0 1px, transparent 1px 6px),
+        linear-gradient(180deg, #fae9bf, #f3dba7);
+    }
+
+    .ingredients-panel::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -18px;
+      height: 24px;
+      background: linear-gradient(135deg, transparent 12px, #fae9bf 0) 0 0/42px 24px repeat-x;
+    }
+
+    .ingredient-column {
+      padding: 0 34px;
+      border-right: 1px solid rgba(162,101,28,.38);
+    }
+
+    .ingredient-column:first-child { padding-left: 12px; }
+    .ingredient-column:last-child {
+      border-right: 0;
+      padding-right: 12px;
+    }
+
+    .ingredient-column h2,
+    .mini-block h2 {
+      margin: 0 0 13px;
+      color: #4a190e;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .ingredient-column ul {
+      margin: 0;
+      padding-left: 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .98rem;
+      line-height: 1.55;
+    }
+
+    .ingredient-column li { margin: 1px 0; }
+
+    .mini-block {
+      text-align: center;
+      padding: 5px 4px 22px;
+      border-bottom: 1px solid rgba(162,101,28,.45);
+      margin-bottom: 20px;
+    }
+
+    .mini-block:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .mini-block p {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .laksa-signature {
+      display: grid;
+      grid-template-columns: minmax(220px, 330px) 1fr;
+      align-items: end;
+      gap: 26px;
+      padding: 18px 36px 12px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(97,137,65,.22), transparent 42%),
+        linear-gradient(180deg, #0d2f1e, #06170f);
+      border-top: 1px solid rgba(214,170,61,.72);
+    }
+
+    .laksa-cart {
+      width: 100%;
+      max-width: 310px;
+      margin-top: -12px;
+      filter: drop-shadow(0 13px 18px rgba(0,0,0,.4));
+    }
+
+    .laksa-tagline {
+      position: relative;
+      margin: 0;
+      max-width: 760px;
+      padding: 22px 0 28px;
+      color: var(--laksa-gold-light);
+      text-align: center;
+      font-size: clamp(1.35rem, 2.3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+      text-wrap: balance;
+    }
+
+    .laksa-tagline::before,
+    .laksa-tagline::after {
+      content: "◆";
+      display: inline-block;
+      margin: 0 18px;
+      color: var(--laksa-gold);
+      font-size: .65em;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 900px) {
+      .laksa-shell { width: min(760px, calc(100% - 20px)); margin: 12px auto 24px; }
+      .laksa-top { grid-template-columns: 1fr; }
+      .laksa-intro { border-right: 0; border-bottom: 1px solid rgba(214,170,61,.65); }
+      .laksa-photo-wrap, .laksa-photo { min-height: 430px; }
+      .ingredients-panel { grid-template-columns: 1fr 1fr; row-gap: 34px; }
+      .ingredient-column:nth-child(2) { border-right: 0; }
+      .ingredient-column:last-child { grid-column: 1 / -1; border-top: 1px solid rgba(162,101,28,.3); padding-top: 28px; }
+      .laksa-signature { grid-template-columns: 1fr; justify-items: center; }
+      .laksa-cart { max-width: 280px; }
+      .laksa-tagline { padding-top: 0; }
+    }
+
+    @media (max-width: 580px) {
+      .laksa-shell { width: 100%; margin: 0; border-left: 0; border-right: 0; border-radius: 0; }
+      .laksa-intro { padding: 14px 24px 30px; }
+      .laksa-nav { font-size: .72rem; }
+      .laksa-logo { width: 120px; }
+      .laksa-title { font-size: 4.8rem; }
+      .curry-page .laksa-title { font-size: clamp(3.2rem, 14vw, 4.5rem); }
+      .laksa-copy { font-size: 1.05rem; }
+      .laksa-order-info { font-size: .84rem; }
+      .laksa-photo-wrap, .laksa-photo { min-height: 330px; }
+      .ingredients-panel { grid-template-columns: 1fr; padding: 42px 26px 32px; }
+      .ingredient-column,
+      .ingredient-column:first-child,
+      .ingredient-column:last-child {
+        padding: 0 0 28px;
+        margin-bottom: 28px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(162,101,28,.35);
+      }
+      .ingredient-column:last-child { grid-column: auto; border-top: 0; margin-bottom: 0; }
+      .laksa-signature { padding: 20px 22px 24px; }
+      .laksa-tagline::before,
+      .laksa-tagline::after { display: none; }
+    }
+  </style>
+</head>
+<body class="laksa-page curry-page">
+  <main class="laksa-shell">
+    <section class="laksa-top">
+      <div class="laksa-intro">
+        <nav class="laksa-nav" aria-label="Dish navigation">
+          <a href="../../index.html">Kitchen</a>
+          <a href="#ingredients" class="laksa-nav-right">Ingredients</a>
+        </nav>
+
+        <img src="../../assets/logo.png" alt="Kay’s Kouncil Kitchen" class="laksa-logo" />
+        <p class="eyebrow">KAY'S NEXT OFFERING</p>
+        <h1 class="laksa-title"><span class="laksa-title-top">Thai</span><span class="laksa-title-bottom">Green Curry</span></h1>
+        <div class="laksa-flourish" aria-hidden="true"></div>
+
+        <p class="laksa-copy">
+          Bright green chilli, creamy coconut and colourful<br>vegetables come together in one deeply satisfying bowl.
+        </p>
+
+        <p class="laksa-hook">Fresh. Fragrant.<br>Made with care.</p>
+
+        <div class="vegetarian-feature" aria-label="New vegetarian option">
+          <strong>New · Vegetarian Option</strong>
+          <span>Choose tofu with vegetable broth—a first from Kay’s Kitchen.</span>
+        </div>
+
+        <div class="laksa-price">
+          <strong>$22</strong>
+          <small>Chicken or vegetarian tofu</small>
+        </div>
+
+        <a
+          class="laksa-order"
+          href="mailto:kayskouncilkitchen@gmail.com?subject=Kay%27s%20Kouncil%20Kitchen%20Order%20-%20Thai%20Green%20Curry&body=Hi%20Kay,%0D%0A%0D%0AI%20would%20like%20to%20order%20Thai%20Green%20Curry!%0D%0A%0D%0AName:%0D%0AQuantity:%0D%0AProtein%20(Chicken/Vegetarian%20Tofu):%0D%0A%0D%0AI%20will%20pay%20Robert%20%2422%20cash%20per%20serve%20at%20reception%20by%20Friday%2028%20August.%0D%0A%0D%0AThank%20you!"
+        >Order Now</a>
+
+        <div class="laksa-order-info" aria-label="Order and pickup details">
+          <p><strong>Order by:</strong> Wednesday 9 September</p>
+          <p class="order-note">(Payment confirms your order)</p>
+            <p><strong>Lunch collection:</strong> Thursday 17 September</p>
+            <p>
+              Your meal will be freshly prepared, clearly labelled, and served with Thai jasmine rice. Choose chicken or the vegetarian tofu option when ordering. Vegetarian orders will be prepared with vegetarian substitutions.
+            </p>
+        </div>
+      </div>
+
+      <div class="laksa-photo-wrap">
+        <img src="chicken-green-curry.png" alt="Kay’s Thai green curry with jasmine rice, broccoli, cauliflower, carrots and beans" class="laksa-photo" />
+      </div>
+    </section>
+
+    <section class="ingredients-panel" id="ingredients">
+      <article class="ingredient-column">
+        <h2>Green Curry Paste</h2>
+        <ul>
+          <li>Fresh green chilli</li>
+          <li>Lemongrass</li>
+          <li>Garlic</li>
+          <li>Shallots</li>
+          <li>Galangal</li>
+          <li>Kaffir lime peel</li>
+          <li>Krachai (fingerroot)</li>
+          <li>Shrimp paste</li>
+          <li>Salt</li>
+          <li>Coriander seed</li>
+        </ul>
+      </article>
+
+      <article class="ingredient-column">
+        <h2>Green Curry</h2>
+        <ul>
+          <li>Coconut milk</li>
+          <li>Chicken or tofu</li>
+          <li>Chicken broth / vegetable broth</li>
+          <li>Fish sauce</li>
+          <li>Palm sugar</li>
+          <li>Soy sauce</li>
+          <li>Broccoli</li>
+          <li>Cauliflower</li>
+          <li>Carrots</li>
+          <li>Beans</li>
+          <li>Kaffir lime leaves</li>
+        </ul>
+      </article>
+
+      <article class="ingredient-column">
+        <div class="mini-block">
+          <h2>Served With</h2>
+          <p>Thai jasmine rice</p>
+        </div>
+        <div class="mini-block">
+          <h2>Heat Level</h2>
+          <p>Mild to medium</p>
+        </div>
+        <div class="mini-block">
+          <h2>Dietary</h2>
+          <p>Dairy free · Gluten free<br>Vegetarian option available</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="laksa-signature" aria-label="Kay’s Kitchen signature">
+      <img src="../../assets/cart.png" alt="Kay’s Kouncil Kitchen Thai street cart" class="laksa-cart" />
+      <p class="laksa-tagline">A fragrant Thai favourite,<br>freshly made by Kay.</p>
+    </section>
+  </main>
+</body>
+</html>
